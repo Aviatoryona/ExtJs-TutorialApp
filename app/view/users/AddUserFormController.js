@@ -13,4 +13,9 @@ Ext.define('Tutorial.view.users.AddUserFormController', {
 
         console.log(form.getValues());
     },
+    
+    onCancelBtnClick: function () {
+        this.getView().destroy();
+    },
+    
 });

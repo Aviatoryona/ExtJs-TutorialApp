@@ -2,6 +2,11 @@ Ext.define('Tutorial.view.posts.PostGridController', {
     extend: 'Ext.app.ViewController',
     
     alias: 'controller.tutorial-postgridcontroller',
+
+    mixins:[
+        'Tutorial.view.mixins.GridMixin'
+    ],
+
     /**
      * Called when the view is created
      */
@@ -17,24 +22,6 @@ Ext.define('Tutorial.view.posts.PostGridController', {
             var winContainer = Ext.widget('tutorial-addpostform');
             winContainer.lookupReference('addpostform').getForm().loadRecord(record);
         }
-    },
-
-    getSelectedRecord: function () {
-        var me = this;
-        var record = me.getSelectedRecords();
-        if (record) {
-            return record[0];
-        }
-    },
-
-    getSelectedRecords: function () {
-        var me = this;
-        var records = me.getView().getSelectionModel().getSelection();
-        if (records[0]) {
-            return records;
-        } else {
-            Ext.Msg.alert('Sorry!!', 'Please select a record from the list');
-        }
-    }
+    }, 
 
 });

@@ -7,6 +7,10 @@ Ext.define('Tutorial.view.users.UserGridController', {
         me.getView().getStore().load();
     },
 
+    mixins:[
+        'Tutorial.view.mixins.GridMixin'
+    ],
+
     showFormController: function () {
         Ext.widget('tutorial-adduserform');
     },
@@ -21,21 +25,4 @@ Ext.define('Tutorial.view.users.UserGridController', {
         }
     },
 
-    getSelectedRecord: function () {
-        var me = this;
-        var record = me.getSelectedRecords();
-        if (record) {
-            return record[0];
-        }
-    },
-
-    getSelectedRecords: function () {
-        var me = this;
-        var records = me.getView().getSelectionModel().getSelection();
-        if (records[0]) {
-            return records;
-        } else {
-            Ext.Msg.alert('Sorry!!', 'Please select a record from the list');
-        }
-    }
 });
