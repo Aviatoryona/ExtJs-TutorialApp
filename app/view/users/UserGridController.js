@@ -17,7 +17,7 @@ Ext.define('Tutorial.view.users.UserGridController', {
         if (record) {
             console.log(record);
             var winContainer = Ext.widget('tutorial-adduserform');
-            winContainer.lookupReference('miform').getForm().loadRecord(record);
+            winContainer.lookupReference('myform').getForm().loadRecord(record);
         }
     },
 
@@ -38,4 +38,4 @@ Ext.define('Tutorial.view.users.UserGridController', {
             Ext.Msg.alert('Sorry!!', 'Please select a record from the list');
         }
     }
-})
+});

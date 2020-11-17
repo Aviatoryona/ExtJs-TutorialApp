@@ -8,6 +8,7 @@ Ext.define('Tutorial.view.posts.AddPostForm', {
     autoShow: true,
     modal: true,
     width: 400,
+    title: 'Add Post',
 
     controller: 'tutorial-addpostformcontroller',
 
@@ -20,31 +21,39 @@ Ext.define('Tutorial.view.posts.AddPostForm', {
             xtype: 'form',
             layout: 'form',
             reference: 'addpostform',
+
             defaults: {
                 xtype: 'textfield',
                 allowBlank: false
             },
+
             items: [
                 {
                     xtype: 'numberfield',
-                    fieldLabel: 'User ID'
+                    fieldLabel: 'User ID',
+                    name: 'userId',
                 },
                 {
-                    fieldLabel: 'Title'
+                    fieldLabel: 'Title',
+                    name: 'title',
                 },
                 {
                     fieldLabel: 'Body',
-                    xtype: 'textarea'
+                    xtype: 'textarea',
+                    name: 'body'
                 }
             ],
             buttons: [
                 {
                     text: 'Save',
                     formBind: true,
-                    handler:'onSaveBtnClick'
+                    handler: 'onSaveBtnClick'
                 },
                 {
                     text: 'Cancel',
+                    handler: function () {
+                        this.getView().destroy();
+                    }
                 }
             ]
         }

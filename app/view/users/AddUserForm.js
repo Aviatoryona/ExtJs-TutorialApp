@@ -3,14 +3,14 @@ Ext.define('Tutorial.view.users.AddUserForm', {
 
     // Uncomment to give this component an xtype 
     xtype: 'tutorial-adduserform',
-
-    frame: true,
     shadow: true,
-    width: 400,
-    autoshow: true,
+    frame: true,
+    autoShow: true,
     modal: true,
+    width: 400,
+    title: 'Add User',
 
-    // controller: 'tutorial-adduserformcontroller',
+    controller: 'tutorial-adduserformcontroller',
 
     requires: [
         'Ext.window.Window'
@@ -20,7 +20,8 @@ Ext.define('Tutorial.view.users.AddUserForm', {
         {
             xtype: 'form',
             layout: 'form',
-            reference: 'miform',
+            reference: 'myform',
+
             defaults: {
                 xtype: 'textfield',
                 allowBlank: false

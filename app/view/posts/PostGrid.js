@@ -21,8 +21,13 @@ Ext.define('Tutorial.view.posts.PostGrid', {
             xtype: 'button',
             text: 'Add New Post',
             handler: function () {
-
+                Ext.widget('tutorial-addpostform');
             }
+        },
+        {
+            xtype: 'button',
+            text: 'View Details',
+            handler: 'onViewDetailsBtnClick'
         }
     ],
 

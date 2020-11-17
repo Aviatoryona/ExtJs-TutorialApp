@@ -15,6 +15,4 @@ Ext.define('Tutorial.view.posts.AddPostFormController', {
     onCancelBtnClick: function () {
         this.getView().destroy();
     }
-
-
 });

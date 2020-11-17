@@ -9,7 +9,7 @@ Ext.define('Tutorial.view.users.AddUserFormController', {
 
     onAddUserFormSubmit:function(){
         var me=this;
-        form=me.getView().lookupReference('miform').getForm();
+        form=me.getView().lookupReference('myform').getForm();
 
         console.log(form.getValues());
     },
