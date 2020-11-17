@@ -8,23 +8,25 @@ Ext.define('Tutorial.view.users.UserGrid', {
         type: 'users'
     },
     layout: 'fit',
+    
     selModel: {
         injectCheckbox: 'first',
         checkOnly: false,
         model: 'MULTI',
         type: 'checkboxmodel',
     },
+
     tbar: [{
             xtype: 'button',
             text: 'Add New User',
-            handler: 'onAddUserButtonClick'
+            handler: 'showFormController'
         },
         {
             xtype: 'button',
             text: 'View Details',
-            handler: 'onViewUserDetailsButtonClick'
         }
     ],
+
     columns: [
         { text: 'User ID', dataIndex: 'id' },
         { text: 'Name', dataIndex: 'name', flex: 1 },

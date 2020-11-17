@@ -4,7 +4,18 @@ Ext.define('Tutorial.view.posts.PostGrid', {
     store: {
         type: 'post'
     },
+
+    controller: 'tutorial-postgridcontroller',
+
     layout: 'fit',
+
+    selModel: {
+        injectCheckbox: 'first',
+        checkOnly: false,
+        model: 'MULTI',
+        type: 'checkboxmodel',
+    },
+
     tbar: [
         {
             xtype: 'button',
@@ -14,7 +25,7 @@ Ext.define('Tutorial.view.posts.PostGrid', {
             }
         }
     ],
-    
+
     columns: [
         { text: 'Post ID', dataIndex: 'id', flex: 1 },
         { text: 'User ID', dataIndex: 'userId', flex: 1 },

@@ -6,10 +6,8 @@ Ext.define('Tutorial.view.users.UserGridController', {
 
     },
 
-    onAddUserButtonClick: function() {
-        Ext.create({
-            xtype: 'userform'
-        });
+    showFormController:function(){
+          Ext.widget('tutorial-adduserform');
     },
 
     onViewUserDetailsButtonClick: function() {

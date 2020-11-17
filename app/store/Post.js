@@ -12,6 +12,6 @@ Ext.define('Tutorial.store.Post',{
             rootProperty:'posts'
         }
     },
-    autoLoad:true,
+    // autoLoad:true, NB Data loaded by controller in init function
     pageSize:10
 })
