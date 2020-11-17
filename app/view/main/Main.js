@@ -84,9 +84,9 @@ Ext.define('Tutorial.view.main.Main', {
     }, {
         title: 'Users',
         iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [{
+            xtype: 'usergrid'
+        }]
     }, {
         title: 'Groups',
         iconCls: 'fa-users',

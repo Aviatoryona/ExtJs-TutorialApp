@@ -1,5 +1,6 @@
 Ext.define('Tutorial.view.posts.PostGridController', {
     extend: 'Ext.app.ViewController',
+    
     alias: 'controller.tutorial-postgridcontroller',
     /**
      * Called when the view is created
@@ -13,8 +14,6 @@ Ext.define('Tutorial.view.posts.PostGridController', {
         var record = me.getSelectedRecords();
         if(record){
             console.log(record);
-
-            
         }
     },
 

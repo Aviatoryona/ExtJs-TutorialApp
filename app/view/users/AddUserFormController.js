@@ -1,10 +1,16 @@
 Ext.define('Tutorial.view.users.AddUserFormController', {
     extend: 'Ext.app.ViewController',
+
     alias: 'controller.tutorial-adduserformcontroller',
     /**
      * Called when the view is created
      */
-    init: function () {}
+    init: function () {},
 
-    
+    onAddUserFormSubmit:function(){
+        var me=this;
+        form=me.getView().lookupReference('miform').getForm();
+
+        console.log(form.getValues());
+    },
 });

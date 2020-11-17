@@ -6,18 +6,17 @@ Ext.define('Tutorial.model.User', {
         { name: 'name', type: 'string' },
         { name: 'username', type: 'string' },
         { name: 'email', type: 'string' },
-        { name: 'addressStreet', type: 'string', mapping: 'address.street' },
-        { name: 'addressSuite', type: 'string', mapping: 'address.suite' },
-        { name: 'addressCity', type: 'string', mapping: 'address.city' },
-        { name: 'addressZipcode', type: 'string', mapping: 'address.zipcode' },
-        { name: 'lat', type: 'string', mapping: 'address.geo.lat' },
-        { name: 'lng', type: 'string', mapping: 'address.geo.lng' },
+        { name: 'address.street', type: 'string', mapping: 'address.street' },
+        { name: 'address.suite', type: 'string', mapping: 'address.suite' },
+        { name: 'address.city', type: 'string', mapping: 'address.city' },
+        { name: 'address.zipcode', type: 'string', mapping: 'address.zipcode' },
+        { name: 'address.geo.lat', type: 'string', mapping: 'address.geo.lat' },
+        { name: 'address.geo.lng', type: 'string', mapping: 'address.geo.lng' },
         { name: 'phone', type: 'string' },
         { name: 'website', type: 'string' },
-        { name: 'companyName', type: 'string', mapping: 'company.name' },
-        { name: 'companyCatchPhrase', type: 'string', mapping: 'company.catchPhrase' },
-        { name: 'companyBs', type: 'string', mapping: 'company.bs' },
-
+        { name: 'company.name', type: 'string', mapping: 'company.name' },
+        { name: 'company.catchPhrase', type: 'string', mapping: 'company.catchPhrase' },
+        { name: 'company.bs', type: 'string', mapping: 'company.bs' },
     ]
 
 });
