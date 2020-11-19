@@ -8,6 +8,8 @@ Ext.define('Tutorial.view.users.AddUserForm', {
     autoShow: true,
     modal: true,
     width: 400,
+    scrollable: true,
+    layout:'fit',
     title: 'Add User',
 
     controller: 'tutorial-adduserformcontroller',
