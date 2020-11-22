@@ -2,6 +2,7 @@ Ext.define('Tutorial.view.comments.CommentWin', {
     extend: 'Ext.Container',
 
     xtype: 'tutorial-commentwin',
+    
     shadow: true,
     frame: true,
     autoShow: true,

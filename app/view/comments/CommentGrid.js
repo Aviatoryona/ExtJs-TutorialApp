@@ -2,8 +2,9 @@ Ext.define('Tutorial.view.comments.CommentGrid', {
     extend: 'Ext.grid.Panel',
     
     xtype : 'tutorial-commentgrid',
+    
     store: {
-        type: 'post'
+        type: 'comment'
     },
 
     controller: 'tutorial-commentgridcontroller',
@@ -27,8 +28,8 @@ Ext.define('Tutorial.view.comments.CommentGrid', {
 
     columns: [
         { text: 'Post ID', dataIndex: 'id', flex: 1 },
-        { text: 'User ID', dataIndex: 'userId', flex: 1 },
-        { text: 'Title', dataIndex: 'title', flex: 2 },
+        { text: 'Name', dataIndex: 'name', flex: 1 },
+        { text: 'Email', dataIndex: 'email', flex: 2 },
         { text: 'Body', dataIndex: 'body', flex: 4 },
     ],
 

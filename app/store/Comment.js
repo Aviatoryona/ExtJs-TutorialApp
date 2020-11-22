@@ -1,5 +1,6 @@
 Ext.define('Tutorial.store.Comment', {
     extend: 'Ext.data.Store',
+
     alias: 'alias.comment',
 
     model: 'Tutorial.model.Comment',
@@ -13,6 +14,5 @@ Ext.define('Tutorial.store.Comment', {
         }
     },
 
-    // autoLoad: true, dont autoload, wait for controller
-    pageSize: 5,
+    // autoLoad: false, dont autoload, wait for controller
 });

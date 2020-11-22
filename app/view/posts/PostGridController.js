@@ -61,8 +61,15 @@ Ext.define('Tutorial.view.posts.PostGridController', {
                             console.log(JSON.stringify(newValue));
                             if (newValue.opt == 'View') {
                                 this.getView().destroy();
+                                localStorage.setItem('postId',1);
+                                Ext.create({
+                                    xtype: 'tutorial-commentwin'  /* show all comments  */
+                                });
                             } else {
-
+                                this.getView().destroy();
+                                Ext.create({
+                                    xtype: 'tutorial-addcomment'  /* show add comment form */
+                                });
                             }
 
                         }
