@@ -7,9 +7,9 @@ Ext.define('Tutorial.view.users.AddUserForm', {
     frame: true,
     autoShow: true,
     modal: true,
-    width: 400,
+    width: 900,
     scrollable: true,
-    layout:'fit',
+    layout: 'fit',
     title: 'Add User',
 
     controller: 'tutorial-adduserformcontroller',
@@ -22,44 +22,43 @@ Ext.define('Tutorial.view.users.AddUserForm', {
     items: [
         {
             xtype: 'form',
-            layout: 'form',
+            layout: 'column',
             reference: 'myform',
-
-            defaults: {
-                xtype: 'textfield',
-                allowBlank: false
-            },
-
+            
             items: [
+
                 {
-                    fieldLabel: 'User ID',
-                    xtype: 'numberfield',
-                    name: 'id',
+                    xtype: 'container',
+                    columnWidth: 0.5,
+                    padding: 10,
+                    items: [
+
+                        {
+                            xtype: 'tutorial-basicinfo',
+                        }
+
+                    ]
+
                 },
+
                 {
-                    fieldLabel: 'Username ',
-                    name: 'username',
+                    xtype: 'container',
+                    columnWidth: 0.5,
+                    padding: 10,
+                    items: [
+
+                        {
+                            xtype: 'tutorial-addressinfo',
+                        },
+
+                        {
+                            xtype: 'tutorial-companyinfo',
+                        },
+
+                    ]
+
                 },
-                {
-                    fieldLabel: 'Name',
-                    name: 'name',
-                },
-                {
-                    fieldLabel: 'Email',
-                    name: 'email',
-                },
-                {
-                    fieldLabel: 'Phone',
-                    name: 'phone',
-                },
-                {
-                    fieldLabel: 'Website',
-                    name: 'website',
-                },
-                {
-                    fieldLabel: 'Company Name',
-                    name: 'company.name',
-                }
+
             ],
             buttons: [
                 {

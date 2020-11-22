@@ -42,16 +42,16 @@ Ext.define('Tutorial.view.posts.PostGridController', {
                     items: [
 
                         {
-                            label: 'View comments',
+                            boxLabel: 'View comments',
                             checked: false,
-                            value: 'View',
+                            inputValue: 'View',
                             name: 'opt'
                         },
 
                         {
-                            label: 'Add comment',
+                            boxLabel: 'Add comment',
                             checked: false,
-                            value: 'Add',
+                            inputValue: 'Add',
                             name: 'opt'
                         }
 
