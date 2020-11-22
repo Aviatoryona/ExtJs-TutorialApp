@@ -28,6 +28,11 @@ Ext.define('Tutorial.view.posts.PostGrid', {
             xtype: 'button',
             text: 'View Details',
             handler: 'onViewDetailsBtnClick'
+        },
+        {
+            xtype: 'textfield',
+            width: 200,
+            placeholder: 'Search...'
         }
     ],
 
@@ -36,5 +41,10 @@ Ext.define('Tutorial.view.posts.PostGrid', {
         { text: 'User ID', dataIndex: 'userId', flex: 1 },
         { text: 'Title', dataIndex: 'title', flex: 2 },
         { text: 'Body', dataIndex: 'body', flex: 4 },
-    ]
+    ],
+
+    listeners: {
+        select: 'onItemSelected'
+    }
+    
 })

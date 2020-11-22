@@ -14,6 +14,7 @@ Ext.define('Tutorial.view.users.AddUserForm', {
 
     controller: 'tutorial-adduserformcontroller',
 
+
     requires: [
         'Ext.window.Window'
     ],
@@ -73,4 +74,5 @@ Ext.define('Tutorial.view.users.AddUserForm', {
             ]
         }
     ]
+
 });

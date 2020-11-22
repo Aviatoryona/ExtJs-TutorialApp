@@ -1,9 +1,9 @@
 Ext.define('Tutorial.view.posts.PostGridController', {
     extend: 'Ext.app.ViewController',
-    
+
     alias: 'controller.tutorial-postgridcontroller',
 
-    mixins:[
+    mixins: [
         'Tutorial.view.mixins.GridMixin'
     ],
 
@@ -22,6 +22,56 @@ Ext.define('Tutorial.view.posts.PostGridController', {
             var winContainer = Ext.widget('tutorial-addpostform');
             winContainer.lookupReference('addpostform').getForm().loadRecord(record);
         }
-    }, 
+    },
+
+    onItemSelected: function () {
+        Ext.create({
+            xtype: 'window',
+            shadow: true,
+            autoShow: true,
+            width: 200,
+            modal: true,
+            frame: true,
+            closable: true,
+
+            items: [
+                {
+                    xtype: 'radiogroup',
+                    height: 100,
+                    vertical: true,
+                    items: [
+
+                        {
+                            label: 'View comments',
+                            checked: false,
+                            value: 'View',
+                            name: 'opt'
+                        },
+
+                        {
+                            label: 'Add comment',
+                            checked: false,
+                            value: 'Add',
+                            name: 'opt'
+                        }
+
+                    ],
+                    listeners: {
+                        change: function (inputField, newValue, oldValue, eOpts) {
+                            alert(newValue);
+                            if (newValue == 'View') {
+                                this.getView().destroy();
+                            } else {
+
+                            }
+
+                        }
+                    }
+
+                }
+            ]
+
+        });
+    }
 
 });

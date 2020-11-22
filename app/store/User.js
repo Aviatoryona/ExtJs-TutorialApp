@@ -12,6 +12,7 @@ Ext.define('Tutorial.store.Users', {
             rootProperty: 'users'
         }
     },
+    
     autoLoad: true,
     pageSize: 5,
 });

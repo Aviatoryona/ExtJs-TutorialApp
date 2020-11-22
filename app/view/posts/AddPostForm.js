@@ -18,6 +18,7 @@ Ext.define('Tutorial.view.posts.AddPostForm', {
 
     items: [
         {
+            itemId: 'myFormId',
             xtype: 'form',
             layout: 'form',
             reference: 'addpostform',
@@ -28,6 +29,11 @@ Ext.define('Tutorial.view.posts.AddPostForm', {
             },
 
             items: [
+                {
+                    xtype: 'displayfield',
+                    name: 'id',
+                    hidden: true
+                },
                 {
                     xtype: 'numberfield',
                     fieldLabel: 'User ID',
