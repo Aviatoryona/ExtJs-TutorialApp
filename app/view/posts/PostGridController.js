@@ -33,11 +33,11 @@ Ext.define('Tutorial.view.posts.PostGridController', {
             modal: true,
             frame: true,
             closable: true,
+            title: 'Post',
 
             items: [
                 {
                     xtype: 'radiogroup',
-                    height: 100,
                     vertical: true,
                     items: [
 
@@ -58,8 +58,8 @@ Ext.define('Tutorial.view.posts.PostGridController', {
                     ],
                     listeners: {
                         change: function (inputField, newValue, oldValue, eOpts) {
-                            alert(newValue);
-                            if (newValue == 'View') {
+                            console.log(JSON.stringify(newValue));
+                            if (newValue.opt == 'View') {
                                 this.getView().destroy();
                             } else {
 

@@ -1,7 +1,6 @@
 Ext.define('Tutorial.view.posts.AddPostForm', {
     extend: 'Ext.window.Window',
 
-    // Uncomment to give this component an xtype 
     xtype: 'tutorial-addpostform',
     shadow: true,
     frame: true,
@@ -30,7 +29,6 @@ Ext.define('Tutorial.view.posts.AddPostForm', {
 
             items: [
                 {
-                    xtype: 'displayfield',
                     name: 'id',
                     hidden: true
                 },

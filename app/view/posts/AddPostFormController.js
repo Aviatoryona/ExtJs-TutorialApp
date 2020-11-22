@@ -8,12 +8,33 @@ Ext.define('Tutorial.view.posts.AddPostFormController', {
 
     onSaveBtnClick: function () {
         var me = this;
-        var win = me.getView().lookupReference('addpostform').getForm();
-        console.log(win.getValues());
+        var fom = me.getView().lookupReference('addpostform').getForm();
+        var id=fom.findField('id').getValue();
+
+        if(id){
+            me.addData.call();
+        }else{
+            me.updateData.call();
+        }
+
+    },
+
+    addData: function () {
+        // fom.submit({
+
+        // });
+        Ext.Msg.alert("add data");
+    },
+
+    updateData: function () {
+        Ext.Msg.alert("update data");
     },
 
     onCancelBtnClick: function () {
-        // this.getView().destroy();
+        this.getView().destroy();
+    },
+
+    sampleOnSubmitFom: function () {
         var cmp = Ext.ComponentQuery.query('tutorial-addpostform')[0];
         console.log(cmp);
 
@@ -43,18 +64,7 @@ Ext.define('Tutorial.view.posts.AddPostFormController', {
                 console.log(resp.responseText);
             }
         });
-
-        // form.submit({
-        //     url:'./',
-        //     success:function(fom,action){
-        //         console.log(action);
-        //     },
-        //     failure:function(fom,action) {
-        //         console.log(action);
-        //     }
-        // });
-
-    },
+    }
 
 
 });

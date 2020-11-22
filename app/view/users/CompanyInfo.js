@@ -17,6 +17,7 @@ Ext.define('Tutorial.view.users.CompanyInfo', {
                     fieldLabel: 'Company Name',
                     name: 'company.name',
                     width: '50%',
+                    xtype: 'textfield',
                 },
 
                 {
@@ -24,6 +25,7 @@ Ext.define('Tutorial.view.users.CompanyInfo', {
                     fieldLabel: 'Bs.',
                     name: 'company.bs',
                     width: '50%',
+                    margin:'0 10'
                 }
             ]
 
