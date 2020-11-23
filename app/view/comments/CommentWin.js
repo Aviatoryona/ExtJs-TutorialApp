@@ -1,5 +1,5 @@
 Ext.define('Tutorial.view.comments.CommentWin', {
-    extend: 'Ext.Container',
+    extend: 'Ext.window.Window',
 
     xtype: 'tutorial-commentwin',
     
@@ -7,7 +7,7 @@ Ext.define('Tutorial.view.comments.CommentWin', {
     frame: true,
     autoShow: true,
     modal: true,
-    width: 400,
+    width: 900,
     title: 'Post Comments',
 
     requires: [

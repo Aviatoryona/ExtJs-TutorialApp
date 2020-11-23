@@ -1,7 +1,7 @@
 Ext.define('Tutorial.store.Comment', {
     extend: 'Ext.data.Store',
 
-    alias: 'alias.comment',
+    alias: 'store.comment',
 
     model: 'Tutorial.model.Comment',
 

@@ -40,7 +40,6 @@ Ext.define('Tutorial.view.comments.AddComment', {
                     name: 'name',
                 },
                 {
-                    xtype: 'emailfield',
                     fieldLabel: 'Email',
                     name: 'email',
                 },
