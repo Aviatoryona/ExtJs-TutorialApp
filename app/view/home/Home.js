@@ -2,7 +2,7 @@ Ext.define('Tutorial.view.home.Home', {
 
     extend: 'Ext.container.Viewport',
 
-    xtype : 'tutorial-home', 
+    xtype: 'tutorial-home',
 
     layout: 'border',
     maximized: true,
@@ -12,33 +12,62 @@ Ext.define('Tutorial.view.home.Home', {
         split: true,
         bodyPadding: 10
     },
-    
+
     items: [{
         title: 'Footer',
         region: 'south',
         height: 100,
         minHeight: 75,
         maxHeight: 150,
-        html: '<p>Footer content</p>'
+        html: '<p>&copy; Aviator 2020</p>'
     },
     {
-        title: 'Header',
         region: 'north',
         height: 100,
         minHeight: 75,
-        maxHeight: 150,
-        html: '<p>Header content</p>'
+        maxHeight: 100,
+        items: [
+            {
+                xtype: 'toolbar',
+                items: [
+                    {
+                        text: 'Aviator',
+                        style: {
+                            'font-size': '24px',
+                            'color': 'white',
+                        }
+                    },
+                    '->', /*spacing */
+                    {
+                        text: 'Users'
+                    },
+                    '-', /*vertical separator */
+                    {
+                        text: 'Users'
+                    },
+                    {
+                        xtype: 'textfield',
+                        style: {
+                            'border': '1px solid white'
+                        },
+                        emptyText: 'Search...'
+                    }
+                ]
+            }
+        ]
     },
     {
-        title: 'Navigation',
         region: 'west',
         floatable: false,
         margin: '5 0 0 0',
-        width: 125,
+        width: 256,
         minWidth: 100,
-        maxWidth: 250,
-        html: '<h2>Main Page</h2><p>This is where the main content would go</p>'
-
+        maxWidth: 256,
+        items: [
+            {
+                xtype: 'tutorial-leftsidebar'
+            }
+        ]
     },
     {
         title: 'Main Content',
@@ -46,7 +75,12 @@ Ext.define('Tutorial.view.home.Home', {
         region: 'center',
         margin: '5 0 0 0',
         items: [{
-            xtype: 'panel'
+            xtype: 'panel',
+            items: [
+                {
+                    html: '<h2>Main Page</h2><p>This is where the main content would go</p>'
+                }
+            ]
         }]
     },
     {
@@ -57,7 +91,7 @@ Ext.define('Tutorial.view.home.Home', {
         width: 125,
         minWidth: 100,
         maxWidth: 250,
-        html: '<p>East content like navigation links could go here</p>'
+        html: '<p>Latest News</p>'
     },
-]
+    ]
 });
