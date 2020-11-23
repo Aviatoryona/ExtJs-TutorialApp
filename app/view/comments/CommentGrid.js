@@ -22,7 +22,7 @@ Ext.define('Tutorial.view.comments.CommentGrid', {
         {
             xtype: 'button',
             text: 'Add  Comment',
-            handler: ''
+            handler: 'onShowAddCommentBtnClick'
         },
     ],
 
@@ -32,5 +32,9 @@ Ext.define('Tutorial.view.comments.CommentGrid', {
         { text: 'Email', dataIndex: 'email', flex: 2 },
         { text: 'Body', dataIndex: 'body', flex: 4 },
     ],
+
+    listeners:{
+        itemkeyup:'onKeyUpClicked'
+    }
 
 });

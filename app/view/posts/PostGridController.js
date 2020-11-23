@@ -4,12 +4,10 @@ Ext.define('Tutorial.view.posts.PostGridController', {
     alias: 'controller.tutorial-postgridcontroller',
 
     mixins: [
-        'Tutorial.view.mixins.GridMixin'
+        'Tutorial.view.mixins.GridMixin',
+        'Tutorial.view.mixins.Miscellaneous'
     ],
 
-    /**
-     * Called when the view is created
-     */
     init: function () {
         this.getView().getStore().load();
     },
@@ -25,6 +23,7 @@ Ext.define('Tutorial.view.posts.PostGridController', {
     },
 
     onItemSelected: function () {
+        var me=this;
         Ext.create({
             xtype: 'window',
             shadow: true,
@@ -58,13 +57,17 @@ Ext.define('Tutorial.view.posts.PostGridController', {
                     ],
                     listeners: {
                         change: function (inputField, newValue, oldValue, eOpts) {
-                            console.log(JSON.stringify(newValue));
                             if (newValue.opt == 'View') {
                                 // this.getView().destroy();
-                                localStorage.setItem('postId',1);
+                                var record = me.getSelectedRecord();
+
+                                console.log(record);
+
+                                localStorage.setItem('postId', 1);
                                 Ext.create({
                                     xtype: 'tutorial-commentwin'  /* show all comments  */
                                 });
+                                
                             } else {
                                 // this.getView().destroy();
                                 Ext.create({

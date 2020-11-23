@@ -10,6 +10,8 @@ Ext.define('Tutorial.view.comments.AddComment', {
     width: 400,
     title: 'Add Comment',
 
+    controller: 'tutorial-addcommentformcontroller',
+
     requires: [
         'Ext.window.Window'
     ],
@@ -53,13 +55,11 @@ Ext.define('Tutorial.view.comments.AddComment', {
                 {
                     text: 'Save',
                     formBind: true,
-                    handler: ''
+                    handler: 'onSaveBtnClick'
                 },
                 {
                     text: 'Cancel',
-                    handler: function(){
-                        this.getView().destroy();
-                    },
+                    handler: 'closeForm',
                 }
             ]
         }
