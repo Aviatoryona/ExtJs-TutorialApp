@@ -10,7 +10,16 @@ Ext.define('Tutorial.view.comments.CommentGridController', {
     alias: 'controller.tutorial-commentgridcontroller',
 
     init: function () {
-        this.getView().getStore().load();
+        var me = this,
+            window = me.getView();
+
+        window.lookupReference('tutorial-commentgrid').getStore().load({
+            params: {
+                postId: window.getViewModel().get('postId'),
+            },
+
+            scope: this,
+        });
     },
 
     onShowAddCommentBtnClick: function () {
@@ -20,13 +29,13 @@ Ext.define('Tutorial.view.comments.CommentGridController', {
     },
 
     onKeyUpClicked: function (grid, record, item, index, e, eOpts) {
-        var me=this;
+        var me = this;
         if (e.getKey() == e.DELETE) {
-            if(record){
+            if (record) {
                 console.log(record.data.body);
-                me.showAlertMsg('Wow','Record found');
-            }else{
-                me.showAlertMsg('Sorry','Please select a record');
+                me.showAlertMsg('Wow', 'Record found');
+            } else {
+                me.showAlertMsg('Sorry', 'Please select a record');
             }
         }
     }

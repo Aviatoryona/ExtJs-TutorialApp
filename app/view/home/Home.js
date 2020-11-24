@@ -14,26 +14,40 @@ Ext.define('Tutorial.view.home.Home', {
     },
 
     items: [{
-        title: 'Footer',
         region: 'south',
-        height: 100,
-        minHeight: 75,
-        maxHeight: 150,
-        html: '<p>&copy; Aviator 2020</p>'
+        height: 50,
+        minHeight: 50,
+        maxHeight: 75,
+        xtype: 'container',
+        style: {
+            'display': 'flex',
+            'align-items': 'center',
+            'text-align': 'center'
+        },
+        items: [
+            {
+                html: '<p>&copy; Aviator 2020</p>'
+            }
+        ]
     },
     {
         region: 'north',
-        height: 100,
-        minHeight: 75,
-        maxHeight: 100,
+        height: 50,
+        minHeight: 50,
+        maxHeight: 75,
+        xtype: 'container',
+        width: '100%',
         items: [
             {
                 xtype: 'toolbar',
+                style: {
+                    'background-color': 'white',
+                },
                 items: [
                     {
                         text: 'Aviator',
                         style: {
-                            'font-size': '24px',
+                            'font-size': '28px',
                             'color': 'white',
                         }
                     },
@@ -43,13 +57,11 @@ Ext.define('Tutorial.view.home.Home', {
                     },
                     '-', /*vertical separator */
                     {
-                        text: 'Users'
+                        text: 'Posts'
                     },
+                    '-',
                     {
                         xtype: 'textfield',
-                        style: {
-                            'border': '1px solid white'
-                        },
                         emptyText: 'Search...'
                     }
                 ]
@@ -76,11 +88,7 @@ Ext.define('Tutorial.view.home.Home', {
         margin: '5 0 0 0',
         items: [{
             xtype: 'panel',
-            items: [
-                {
-                    html: '<h2>Main Page</h2><p>This is where the main content would go</p>'
-                }
-            ]
+            itemId:'panelBody'
         }]
     },
     {

@@ -5,9 +5,10 @@ Ext.define('Tutorial.store.Comment', {
 
     model: 'Tutorial.model.Comment',
 
+    // https://jsonplaceholder.typicode.com/comments?postId=${localStorage.getItem('postId')}
     proxy: {
         type: 'ajax',
-        url: `https://jsonplaceholder.typicode.com/comments?postId=${localStorage.getItem('postId')}`,
+        url: `https://jsonplaceholder.typicode.com/comments`,
         reader: {
             type: 'json',
             rootProperty: 'users'

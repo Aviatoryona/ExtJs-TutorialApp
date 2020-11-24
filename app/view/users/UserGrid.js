@@ -4,11 +4,11 @@ Ext.define('Tutorial.view.users.UserGrid', {
     xtype: 'usergrid',
 
     controller: 'usergridcontroller',
-    
+
     store: {
         type: 'users'
     },
-    
+
     layout: 'fit',
 
     selModel: {
@@ -35,7 +35,14 @@ Ext.define('Tutorial.view.users.UserGrid', {
         { text: 'User ID', dataIndex: 'id' },
         { text: 'Name', dataIndex: 'name', flex: 1 },
         { text: 'UserName', dataIndex: 'username', flex: 1 },
-        { text: 'Email', dataIndex: 'email', flex: 1 },
+        {
+            text: 'Email', 
+            dataIndex: 'email', 
+            flex: 1,
+            renderer: function (value) {
+                return Ext.String.format('<a href="mailto:{0}">{1}</a>', value, value);
+            }
+        },
         { text: 'Street', dataIndex: 'address.street', hidden: true, flex: 1 },
         { text: 'Suite', dataIndex: 'address.suite', hidden: true, flex: 1 },
         { text: 'City', dataIndex: 'address.city', hidden: true, flex: 1 },

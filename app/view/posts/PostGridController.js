@@ -23,7 +23,7 @@ Ext.define('Tutorial.view.posts.PostGridController', {
     },
 
     onItemSelected: function () {
-        var me=this;
+        var me = this;
         Ext.create({
             xtype: 'window',
             shadow: true,
@@ -60,14 +60,17 @@ Ext.define('Tutorial.view.posts.PostGridController', {
                             if (newValue.opt == 'View') {
                                 // this.getView().destroy();
                                 var record = me.getSelectedRecord();
-
-                                console.log(record);
-
-                                localStorage.setItem('postId', 1);
+                                localStorage.setItem('postId', record.get('id'));
                                 Ext.create({
-                                    xtype: 'tutorial-commentwin'  /* show all comments  */
+                                    xtype: 'tutorial-commentwin',  /* show all comments  */
+                                    viewModel: {
+                                        data: {
+                                            title:`${record.get('title').toUpperCase()}`,
+                                            postId: record.get('id'),
+                                        }
+                                    }
                                 });
-                                
+
                             } else {
                                 // this.getView().destroy();
                                 Ext.create({

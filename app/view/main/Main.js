@@ -90,9 +90,11 @@ Ext.define('Tutorial.view.main.Main', {
     }, {
         title: 'Groups',
         iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items:[
+            {
+                xtype:'tutorial-inspiniasingleuser'
+            }
+        ]
     }, {
         title: 'Settings',
         iconCls: 'fa-cog',

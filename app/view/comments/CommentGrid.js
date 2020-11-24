@@ -1,13 +1,11 @@
 Ext.define('Tutorial.view.comments.CommentGrid', {
     extend: 'Ext.grid.Panel',
-    
-    xtype : 'tutorial-commentgrid',
-    
+
+    xtype: 'tutorial-commentgrid',
+
     store: {
         type: 'comment'
     },
-
-    controller: 'tutorial-commentgridcontroller',
 
     layout: 'fit',
 
@@ -33,8 +31,8 @@ Ext.define('Tutorial.view.comments.CommentGrid', {
         { text: 'Body', dataIndex: 'body', flex: 4 },
     ],
 
-    listeners:{
-        itemkeyup:'onKeyUpClicked'
+    listeners: {
+        itemkeyup: 'onKeyUpClicked'
     }
 
 });
