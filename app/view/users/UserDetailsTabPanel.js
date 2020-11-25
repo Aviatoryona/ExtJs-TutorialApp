@@ -5,13 +5,24 @@ Ext.define('Tutorial.view.users.UserDetailsTabPanel', {
 
     activeItem: 0,
 
+    defaults: {
+        layout: 'fit',
+        bodyStyle: 'padding:5px'
+    },
+
     items: [
-        
+
         {
             title: 'Basic Info',
             items: [
                 {
-                    xtype: 'tutorial-basicinfo'
+                    xtype: 'form',
+                    itemId:'userbasicinfo',
+                    items: [
+                        {
+                            xtype: 'tutorial-basicinfo'
+                        }
+                    ]
                 }
             ]
         },
@@ -20,7 +31,13 @@ Ext.define('Tutorial.view.users.UserDetailsTabPanel', {
             title: 'Address Info',
             items: [
                 {
-                    xtype: 'tutorial-addressinfo'
+                    xtype: 'form',
+                    itemId:'useraddressinfo',
+                    items: [
+                        {
+                            xtype: 'tutorial-addressinfo'
+                        }
+                    ]
                 }
             ]
         },
@@ -29,7 +46,13 @@ Ext.define('Tutorial.view.users.UserDetailsTabPanel', {
             title: 'Company Info',
             items: [
                 {
-                    xtype: 'tutorial-companyinfo'
+                    xtype: 'form',
+                    itemId:'usercompanyinfo',
+                    items: [
+                        {
+                            xtype: 'tutorial-companyinfo'
+                        }
+                    ]
                 }
             ]
         }

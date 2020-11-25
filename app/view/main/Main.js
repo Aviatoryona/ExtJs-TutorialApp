@@ -85,7 +85,7 @@ Ext.define('Tutorial.view.main.Main', {
         title: 'Users',
         iconCls: 'fa-user',
         items: [{
-            xtype: 'usergrid'
+            xtype: 'tutorial-usermasterdetail'
         }]
     }, {
         title: 'Groups',

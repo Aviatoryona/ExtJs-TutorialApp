@@ -26,7 +26,7 @@ Ext.define('Tutorial.view.users.UserGrid', {
         },
         {
             xtype: 'button',
-            text: 'View Details',
+            text: 'Edit Details',
             handler: 'onViewDetailsBtnClick',
         }
     ],
@@ -63,7 +63,7 @@ Ext.define('Tutorial.view.users.UserGrid', {
         emptyMsg: 'No Record to display'
     },
 
-    // listeners: {
-    //     select: 'onItemSelected'
-    // }
+    listeners: {
+        select: 'onItemSelected'
+    }
 });
