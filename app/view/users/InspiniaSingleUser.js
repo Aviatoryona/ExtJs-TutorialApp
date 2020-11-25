@@ -6,20 +6,20 @@ Ext.define('Tutorial.view.users.InspiniaSingleUser', {
     layout: {
         type: 'column'
     },
-    width: 364,
-    height: 283,
+    width: 300,
+    height: 180,
 
     border: 1,
-
     style: {
-        borderColor: '#000000',
-        borderStyle: 'solid',
-        borderWidth: '1px'
+        backgroundColor: '#ffffff',
+        border: '1px solid #e7eaec',
+        padding: '20px',
+        marginBottom: '20px',
+        fontSize: '13px',
+        fontFamily: `"open sans", "Helvetica Neue", Helvetica, Arial, sans-serif`
     },
 
-
     defaults: {
-        bodyPadding: '15px',
         xtype: 'container'
     },
 
@@ -35,14 +35,17 @@ Ext.define('Tutorial.view.users.InspiniaSingleUser', {
                     width: 60,
                     src: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
                     style: {
-                        borderRadius: '50%'
+                        borderRadius: '50%',
+                        marginTop: '20px',
                     }
                 },
                 {
-                    text: 'Software Engineer',
+                    html: '<strong>Software <br> Engineer</strong>',
                     style: {
                         textAlign: 'center',
-                        fontWeight: '600'
+                        fontWeight: '600',
+                        'font-size': '11px',
+                        color: '#676a6c',
                     }
                 }
             ]
@@ -56,30 +59,7 @@ Ext.define('Tutorial.view.users.InspiniaSingleUser', {
             },
             items: [
                 {
-                    text: 'Yonathaniel K',
-                    style: {
-                        textAlign: 'center',
-                        fontWeight: '600',
-                        fontSize: '24px'
-                    },
-
-                },
-                {
-                    xtype: 'splitter'
-                },
-                {
-                    html: `<p><i class="x-fa fa-map-marker"></i> Riviera State 32/106</p>`
-                },
-                {
-                    xtype: 'splitter'
-                },
-
-                {
-                    text: 'Twitter, Inc',
-                    style: {
-                        textAlign: 'center',
-                        fontWeight: '600'
-                    }
+                    html: '<strong>Yonathaniel K</strong><br><p><i class="x-fa fa-map-marker"></i> Riviera State 32/106</p>',
                 },
                 {
                     html: `<address>
