@@ -79,7 +79,7 @@ Ext.define('Tutorial.view.main.Main', {
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
-            xtype: 'postgrid'
+            xtype: 'postmasterdetail'
         }]
     }, {
         title: 'Users',
@@ -90,16 +90,34 @@ Ext.define('Tutorial.view.main.Main', {
     }, {
         title: 'Groups',
         iconCls: 'fa-users',
-        items:[
+        items: [
             {
-                xtype:'tutorial-inspiniasingleuser'
+                xtype: 'tutorial-inspiniasingleuser'
             }
         ]
-    }, {
+    },
+    {
+        title: 'Wizard',
+        iconCls: 'fa-cog',
+        items: [
+            {
+                xtype: 'button',
+                text: 'Lauch wizard',
+                style: {
+                    'border-radius': '22px',
+                    'background-color': 'pink',
+                    'color': 'white'
+                },
+                handler: 'wizardBtnClick'
+            }
+        ]
+    },
+    {
         title: 'Settings',
         iconCls: 'fa-cog',
         bind: {
             html: '{loremIpsum}'
         }
-    }]
+    }
+    ]
 });

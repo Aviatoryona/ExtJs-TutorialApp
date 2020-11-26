@@ -10,16 +10,22 @@ Ext.define('Tutorial.view.comments.CommentGridController', {
     alias: 'controller.tutorial-commentgridcontroller',
 
     init: function () {
+        var me = this;
+        me.load();
+    },
+
+    load: function () {
         var me = this,
             window = me.getView();
 
-        window.lookupReference('tutorial-commentgrid').getStore().load({
-            params: {
-                postId: window.getViewModel().get('postId'),
-            },
+        if (window.getViewModel().get('postId') != null)
+            window.lookupReference('tutorial-commentgrid').getStore().load({
+                params: {
+                    postId: window.getViewModel().get('postId'),
+                },
 
-            scope: this,
-        });
+                scope: this,
+            });
     },
 
     onShowAddCommentBtnClick: function () {

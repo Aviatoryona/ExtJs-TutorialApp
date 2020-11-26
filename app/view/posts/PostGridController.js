@@ -22,7 +22,21 @@ Ext.define('Tutorial.view.posts.PostGridController', {
         }
     },
 
-    onItemSelected: function () {
+
+    //used in PostMasterDetail
+    onItemSelected: function (grid, record, index, eOpts) {
+        var me = this,
+            view = me.getView();
+
+        var container = Ext.ComponentQuery.query('postmasterdetail #micontainer')[0]; //view.lookupReference('micontainer');
+        var viewModel = container.getViewModel();
+        viewModel.set('postId', record.get('id'));
+        viewModel.notify();
+        container.getController().load();
+    },
+
+    /**/
+    onItemSelected1: function () {
         var me = this;
         Ext.create({
             xtype: 'window',
@@ -65,7 +79,7 @@ Ext.define('Tutorial.view.posts.PostGridController', {
                                     xtype: 'tutorial-commentwin',  /* show all comments  */
                                     viewModel: {
                                         data: {
-                                            title:`${record.get('title').toUpperCase()}`,
+                                            title: `${record.get('title').toUpperCase()}`,
                                             postId: record.get('id'),
                                         }
                                     }

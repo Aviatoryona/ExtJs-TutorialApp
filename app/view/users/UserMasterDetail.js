@@ -38,11 +38,9 @@ Ext.define('Tutorial.view.users.UserMasterDetail', {
             minWidth: 300,
             maxWidth: 450,
             items: [
-
                 {
                     xtype: 'tutorial-userdetailstabpanel'
                 }
-
             ]
         },
 

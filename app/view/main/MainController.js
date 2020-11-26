@@ -15,5 +15,10 @@ Ext.define('Tutorial.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
+    },
+
+    wizardBtnClick: function(){
+        Ext.widget('cardlayoutdemo');
     }
+    
 });
